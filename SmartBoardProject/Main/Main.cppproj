@@ -32,15 +32,15 @@
     <EraseKey />
     <AsfFrameworkConfig>
       <framework-data xmlns="">
-  <options />
-  <configurations />
-  <files />
-  <documentation help="" />
-  <offline-documentation help="" />
-  <dependencies>
-    <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
-  </dependencies>
-</framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.40.0" />
+        </dependencies>
+      </framework-data>
     </AsfFrameworkConfig>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -72,6 +72,15 @@
       <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\mbed</Value>
+      <Value>..\include\libraries\Servo\src\megaavr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\Stepper\src</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -100,6 +109,15 @@
       <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\mbed</Value>
+      <Value>..\include\libraries\Servo\src\megaavr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\Stepper\src</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -153,6 +171,15 @@
       <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\mbed</Value>
+      <Value>..\include\libraries\Servo\src\megaavr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\Stepper\src</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -181,6 +208,15 @@
       <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\core</Value>
       <Value>%24(ProjectDir)\..\ArduinoCore\include\variants\mega</Value>
+      <Value>..\include\libraries\Servo\src</Value>
+      <Value>..\include\libraries\Servo\src\avr</Value>
+      <Value>..\include\libraries\Servo\src\mbed</Value>
+      <Value>..\include\libraries\Servo\src\megaavr</Value>
+      <Value>..\include\libraries\Servo\src\nrf52</Value>
+      <Value>..\include\libraries\Servo\src\sam</Value>
+      <Value>..\include\libraries\Servo\src\samd</Value>
+      <Value>..\include\libraries\Servo\src\stm32f4</Value>
+      <Value>..\include\libraries\Stepper\src</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -206,7 +242,58 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="include\libraries\Servo\src\avr\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\mbed\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\megaavr\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\nrf52\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\samd\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\sam\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\Servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Servo\src\stm32f4\ServoTimers.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\libraries\Stepper\src\Stepper.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Sketch.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\avr\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\mbed\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\megaavr\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\nrf52\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\samd\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\sam\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Servo\src\stm32f4\Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\libraries\Stepper\src\Stepper.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Content Include="readme.html">
@@ -218,6 +305,34 @@
       <Project>016b5f72-64d3-470e-9795-4e376ef84bc2</Project>
       <Private>True</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="include\" />
+    <Folder Include="include\libraries\" />
+    <Folder Include="include\libraries\Servo\" />
+    <Folder Include="include\libraries\Servo\src\" />
+    <Folder Include="include\libraries\Servo\src\avr\" />
+    <Folder Include="include\libraries\Servo\src\mbed\" />
+    <Folder Include="include\libraries\Servo\src\megaavr\" />
+    <Folder Include="include\libraries\Servo\src\nrf52\" />
+    <Folder Include="include\libraries\Servo\src\samd\" />
+    <Folder Include="include\libraries\Servo\src\sam\" />
+    <Folder Include="include\libraries\Servo\src\stm32f4\" />
+    <Folder Include="include\libraries\Stepper\" />
+    <Folder Include="include\libraries\Stepper\src\" />
+    <Folder Include="src\" />
+    <Folder Include="src\libraries\" />
+    <Folder Include="src\libraries\Servo\" />
+    <Folder Include="src\libraries\Servo\src\" />
+    <Folder Include="src\libraries\Servo\src\avr\" />
+    <Folder Include="src\libraries\Servo\src\mbed\" />
+    <Folder Include="src\libraries\Servo\src\megaavr\" />
+    <Folder Include="src\libraries\Servo\src\nrf52\" />
+    <Folder Include="src\libraries\Servo\src\samd\" />
+    <Folder Include="src\libraries\Servo\src\sam\" />
+    <Folder Include="src\libraries\Servo\src\stm32f4\" />
+    <Folder Include="src\libraries\Stepper\" />
+    <Folder Include="src\libraries\Stepper\src\" />
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>
