@@ -269,6 +269,9 @@
     <Compile Include="include\libraries\Stepper\src\Stepper.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="include\PenHandler.hpp">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Sketch.cpp">
       <SubType>compile</SubType>
     </Compile>
@@ -294,6 +297,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\libraries\Stepper\src\Stepper.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\PenHandler.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Content Include="readme.html">
