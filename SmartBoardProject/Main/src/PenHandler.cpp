@@ -1,5 +1,4 @@
-﻿#include <Servo.h>
-#include <Arduino.h>
+﻿#include <Arduino.h>
 #include "../include/PenHandler.hpp"
 
 namespace drawing{
@@ -12,14 +11,17 @@ namespace drawing{
 
 	void PenHandler::up(){
 		servo.write(90);
+		delay(200);
 	}
 
 	void PenHandler::penDown(){
 		servo.write(0);
+		delay(200);
 	}
 
 	void PenHandler::eraserDown(){
 		servo.write(180);
+		delay(200);
 	}
 
 }

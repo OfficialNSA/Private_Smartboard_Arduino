@@ -21,12 +21,12 @@
     <OverrideVtor>false</OverrideVtor>
     <CacheFlash>true</CacheFlash>
     <ProgFlashFromRam>true</ProgFlashFromRam>
-    <RamSnippetAddress />
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
     <UncachedRange />
     <preserveEEPROM>true</preserveEEPROM>
-    <OverrideVtorValue />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
-    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
     <AssemblyName>Main</AssemblyName>
     <ResetRule>0</ResetRule>
     <EraseKey />
@@ -42,6 +42,19 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtoolserialnumber />
+    <avrdeviceexpectedsignature>0x1E9801</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions xmlns="">
+        <InterfaceProperties>
+        </InterfaceProperties>
+      </ToolOptions>
+      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber xmlns="">
+      </ToolNumber>
+      <ToolName xmlns="">Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -242,6 +255,15 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="include\AccelStepper.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\BasicMovements.hpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\Coordinate.hpp">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\libraries\Servo\src\avr\ServoTimers.h">
       <SubType>compile</SubType>
     </Compile>
@@ -269,10 +291,22 @@
     <Compile Include="include\libraries\Stepper\src\Stepper.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="include\MultiStepper.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\PenHandler.hpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Sketch.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\AccelStepper.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\BasicMovements.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Coordinate.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\libraries\Servo\src\avr\Servo.cpp">
@@ -297,6 +331,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\libraries\Stepper\src\Stepper.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\MultiStepper.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\PenHandler.cpp">
